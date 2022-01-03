@@ -5,7 +5,8 @@ from .models import*
 class ArtikelAdmin(admin.ModelAdmin):
     list_display = ('nama','judul','body','kategory','date')
 
-
+# anjay jadi
+# lagi
 
 admin.site.register(Kategori)
 admin.site.register(Artikel, ArtikelAdmin)
