@@ -1,5 +1,6 @@
 {% extends 'back/base.html' %}
 
+
 {% block content %}
 <div class="content">
     <div class="container-fluid">
@@ -21,23 +22,22 @@
                                 <th data-field="actions" data-sortable="true">Actions</th>
                             </thead>
                             <tbody>
-                                {% for l in list_user %}
-                                <tr>
-                                    <td></td>
-                                    <td>{{forloop.counter}}</td>
-                                    <td>{{l.username}}</td>
-                                    <td>{{l.email}}</td>
-                                    <td>{{l.is_active}}</td>
-                                    <td>{{l.is_staff}}</td>
+                            {% for l in list_user %}
+                            <tr>
+                                <td></td>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{l.username}}</td>
+                                <td>{{l.email}}</td>
+                                <td>{{l.is_active}}</td>
+                                <td>{{l.is_staff}}</td>
 
-                                    <td>
-                                        <a class="btn btn-sm btn-info" href="{% url 'user_detil' l.id %}">lihat</a>
-                                        <a class="btn btn-sm btn-warning" href="{% url 'user_edit' l.id %}">edit</a>     
-                                        <a onclick="return confirm('delete User?');"class="btn btn-sm btn-danger" href="{% url 'user_delete' l.id %}">delete</a>
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                               
+                                <td>
+                                    <a class="btn btn-sm btn-info" href="{% url 'user_detil' l.id %}">lihat</a>
+                                    <a class="btn btn-sm btn-warning" href="{% url 'user_edit' l.id %}">edit</a>     
+                                    <a onclick="return confirm('delete User?');"class="btn btn-sm btn-danger" href="{% url 'user_delete' l.id %}">delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
