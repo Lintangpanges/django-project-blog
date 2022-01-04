@@ -3,9 +3,9 @@ version: '3'
 services:
     web:
         build: .
-        container_name: belajar_django_blog
+        container_name: lintangajipangestu
 
-        command : gunicorn mysite.wsgi:application --bind 0.0.0.0:9002
+        command : gunicorn myproject.wsgi:application --bind 0.0.0.0:9002
 
         volumes:
             - .:/app

@@ -1,15 +1,14 @@
+from re import template
+import re
 import contextlib
 from typing import ContextManager
 from django.http import request
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
-
 from django.contrib.auth.models import User
 from rest_framework import response
-
 from .models import Artikel,Kategori
 from .forms import ArtikelForms
-
 from rest_framework import serializers, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
